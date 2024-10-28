@@ -1,0 +1,21 @@
+//Import Base files
+ @import './base/reset'; 
+ @import './base/globals'; 
+ @import './base/typography'; 
+
+//Import Utils files
+@import './utils/variables';//all variables
+@import './utils/mixins';//
+@import './utils/breakpoints';//media query
+
+ 
+
+//Import layout components
+ @import './layout/navbar';
+ @import './layout/header';
+ @import './layout/footer';
+
+//Import page-specific styles
+ @import './pages/home';
+ @import './pages/projects';
+ @import './pages/contact';
