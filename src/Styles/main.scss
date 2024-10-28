@@ -1,19 +1,23 @@
-//Import Utils files
-@import "./utils/variables"; //all variables
-@import "./utils/mixins"; //
-@import "./utils/breakpoints"; //media query
+@use './root.scss';  
 
-//Import Base files
-@import "./base/reset";
-@import "./base/globals";
-@import "./base/typography";
+// Import Utils files
+@use "./utils/variables" as *; // All variables will be available
+@use "./utils/mixins"; // Mixins will be available under mixins  
+@use "./utils/breakpoints"; // Media queries  
 
-//Import layout components
-@import "./layout/navbar";
-@import "./layout/header";
-@import "./layout/footer";
+// Import Base files
+@use "./base/reset";
+@use "./base/globals";
+@use "./base/typography";
 
-//Import page-specific styles
-@import "./pages/home";
-@import "./pages/projects";
-@import "./pages/contact";
+
+
+// Import layout components
+@use "./layout/slidebar";
+@use "./layout/header";
+@use "./layout/footer";
+
+// Import page-specific styles
+@use "./pages/home";
+@use "./pages/projects";
+@use "./pages/contact";

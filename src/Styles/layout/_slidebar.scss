@@ -1,0 +1,20 @@
+.slidebar{
+  width: 10rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(143, 196, 221);
+  transition: all .3s ease-in;
+  &__expanded{
+    width:15rem;
+  }
+  &__list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4;
+  }
+}
+ 
