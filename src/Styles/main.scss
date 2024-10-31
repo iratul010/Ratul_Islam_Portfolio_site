@@ -1,9 +1,9 @@
-@use './root.scss';  
 
 // Import Utils files
-@use "./utils/variables" as *; // All variables will be available
-@use "./utils/mixins"; // Mixins will be available under mixins  
-@use "./utils/breakpoints"; // Media queries  
+
+@use "./utils/variables" as *  ; // All variables will be available
+
+@use "./utils/mixins" as *; // Mixins will be available under mixins  
 
 // Import Base files
 @use "./base/reset";
@@ -21,3 +21,9 @@
 @use "./pages/home";
 @use "./pages/projects";
 @use "./pages/contact";
+@use './root.scss';  
+
+
+
+//Media 
+@use "./utils/breakpoints" ; // Media queries  

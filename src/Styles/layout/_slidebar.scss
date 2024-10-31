@@ -1,20 +1,53 @@
-.slidebar{
+@use "../utils/variables" as *;
+.slidebar {
   width: 10rem;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgb(143, 196, 221);
-  transition: all .3s ease-in;
-  &__expanded{
-    width:15rem;
+  background-color: rgb(144, 214, 141);
+  transition: all 0.3s ease-in;
+
+  &__expanded {
+    width: 15rem;
   }
-  &__list{
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__menus {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 4;
+
+    row-gap: 2rem;
+  }
+  &__item{
+    font-size: 2rem;
+    text-decoration: none;
+    color:#fff;
+    &:hover{
+      color:$color-grey-light-3;
+    }
+  }
+  &__icons {
+    font-size: 3.5rem;
+    color: $color-grey-light-3;
+    padding: 1rem;
+    &:hover{
+      color:$color-grey-light-1;
+    }
+  }
+  &__themeToggtle {
+    transition: all .3s ease;
   }
 }
+
  
