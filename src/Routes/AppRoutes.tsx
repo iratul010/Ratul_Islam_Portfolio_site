@@ -1,6 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+ 
+ 
+import App from "../App";
 import Root from "../Root/Root";
-import Home from "../Pages/Home/Home";
 
 const AppRoutes = () => {
   const router = createBrowserRouter([
@@ -10,9 +12,10 @@ const AppRoutes = () => {
      children:[
        {
          path:'/',
-         element:<Home/>,
+         element:<App/>,
 
-       }
+       },
+      
      ]
     }
 ])

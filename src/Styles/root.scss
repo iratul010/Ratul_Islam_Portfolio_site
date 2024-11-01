@@ -1,4 +1,7 @@
+@use './utils/variables'as *;
+
 .root{
   display: flex;
-  margin-left: 20rem;
+  margin-left: 10rem;
+  background-color: $color-grey-light-3;
 }

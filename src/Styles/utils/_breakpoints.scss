@@ -1,14 +1,217 @@
 @use "../utils/variables" as *;
 
-@media screen and (max-width: $bp-small) {
-   
-  .slidebar{
-    &__item{
+
+//Largest
+@media screen and (max-width: $bp-largest) {
+  .slidebar {
+    &__item {
       font-size: 1.6rem;
     }
     &__icons {
-    font-size: 2.5rem  ;
+      font-size: 2.5rem;
+    }
   }
 
+  .home {
+    &__container {
+      
+      margin-left: 0;
+      padding: 2rem 1rem;
+       
+    }
+    &__text {
+      flex: 1;
+    }
+    &__about--text {
+      padding: 0;
+      font-size: 1.6rem;
+    }
+    &__heading--one {
+      font-size: 5rem;
+    }
+    &__heading--three {
+      font-size: 2.5rem;
+    }
+
+    
+    &__profile {
+      flex: 1;
+    }
+    &__img {
+      max-width: 40%;
+    }
+    &__social--link {
+      & > * {
+        font-size: 2.4rem;
+        color: #38616b;
+        padding: 1rem 1.2rem;
+      }
+    }
+    &__btn-resume {
+      font-size: 1.4rem;
+      width: 12rem;
+      padding: 1.2rem 2rem;
+    }
+
+    &__img--circle {
+      width: 70%;
+      height: 160%;
+    }
+  }
 }
+// Laptop
+@media screen and (max-width: $bp-large) {
+  .slidebar {
+    &__item {
+      font-size: 1.6rem;
+    }
+    &__icons {
+      font-size: 2.5rem;
+    }
+  }
+
+  .home {
+    &__container {
+      margin-left: 0;
+      padding: 2rem 1rem;
+    }
+    &__text {
+      flex: 1;
+    }
+
+    &__heading--one {
+      font-size: 4.5rem;
+    }
+    &__heading--three {
+      font-size: 2.5rem;
+    }
+    &__about--text {
+      padding: 0;
+      font-size: 1.6rem;
+    }
+    &__profile {
+      flex: 1;
+    }
+    &__img {
+      max-width: 60%;
+    }
+  }
+}
+// Tablet
+@media screen and (max-width: $bp-medium) {
+  .slidebar {
+    &__item {
+      font-size: 1.6rem;
+    }
+    &__icons {
+      font-size: 2.5rem;
+    }
+  }
+
+  .home {
+    &__container {
+     
+      margin-left: 0;
+      padding: 2rem 1rem;
+      flex-direction: column;
+    }
+    &__text {
+      flex: 1;
+       
+    }
+    &__about--text {
+      padding: 0;
+      font-size: 1.4rem;
+    }
+    &__heading--one {
+      font-size: 4rem;
+    }
+    &__heading--three {
+      font-size: 2rem;
+    }
+    &__about--text {
+      padding: 1rem 10rem;
+    }
+    &__profile {
+      flex: 1;
+    }
+    &__img {
+      max-width: 25%;
+    }
+    &__social--link {
+      & > * {
+        font-size: 2.4rem;
+        color: #38616b;
+        padding: 1rem 1.2rem;
+      }
+    }
+    &__btn-resume {
+      font-size: 1.4rem;
+      width: 10rem;
+      padding: 1rem 2rem;
+    }
+
+    &__img--circle {
+      width: 35%;
+      height: 75%;
+    }
+  }
+}
+// Mobile
+@media screen and (max-width: $bp-small) {
+  .slidebar {
+    &__item {
+      font-size: 1.6rem;
+    }
+    &__icons {
+      font-size: 2.5rem;
+    }
+  }
+
+  .home {
+    &__container {
+      
+      margin-left: 0;
+      padding: 2rem 1rem;
+      flex-direction: column;
+    }
+    &__text {
+      flex: 1;
+    }
+    &__about--text {
+      padding: 0;
+      font-size: 1.4rem;
+    }
+    &__heading--one {
+      font-size: 3rem;
+    }
+    &__heading--three {
+      font-size: 1.8rem;
+    }
+
+    
+    &__profile {
+      flex: 1;
+    }
+    &__img {
+      max-width: 40%;
+    }
+    &__social--link {
+      & > * {
+        font-size: 2.4rem;
+        color: #38616b;
+        padding: 1rem 1.2rem;
+      }
+    }
+    &__btn-resume {
+      font-size: 1.4rem;
+      width: 10rem;
+      padding: 1rem 2rem;
+    }
+
+    &__img--circle {
+      width: 60%;
+      height: 70%;
+    }
+  }
 }

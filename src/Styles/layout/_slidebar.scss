@@ -5,7 +5,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgb(144, 214, 141);
+  background-color: $color-primary;
   transition: all 0.3s ease-in;
 
   &__expanded {
@@ -33,16 +33,19 @@
     font-size: 2rem;
     text-decoration: none;
     color:#fff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
     &:hover{
       color:$color-grey-light-3;
     }
   }
   &__icons {
     font-size: 3.5rem;
-    color: $color-grey-light-3;
+    color: $color-grey-light-1;
     padding: 1rem;
     &:hover{
-      color:$color-grey-light-1;
+      color:$color-grey-light-3;
     }
   }
   &__themeToggtle {
