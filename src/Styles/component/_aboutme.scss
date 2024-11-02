@@ -1,0 +1,96 @@
+@use '../utils/variables' as *;
+.about-me{
+  width: 100%;
+  height: 100%;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+ 
+  &__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ 
+    padding: 10rem 15rem;
+  
+  }
+  &__details{
+    font-size: 1.8rem;
+    font-weight: 300;
+  
+  }
+  &__title{
+    font-size: 5rem;
+    font-weight: 400;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(78, 133, 78);
+  
+ 
+  }
+  &__content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+  }
+  &__image{
+    flex: 1;
+    & img{
+      background-color: rgb(145, 187, 145);
+   
+      max-width:370px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+  &__info{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 4rem;
+  }
+  &__stats{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+     & > *{
+      border: 2px solid $color-grey-dark-3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 40rem;
+      height: 18rem;
+      border-radius: 2rem;
+      border:2px solid $color-primary;
+      & > .icon{
+        font-size: 3.5rem;
+        color:rgb(62, 110, 62) ;
+      }
+      & > h3{
+        color:rgb(62, 110, 62) ;
+        font-size: 2.5rem;
+        font-weight: 300;
+      }
+      & > p{
+      
+        font-size: 1.6rem;
+        & > *{
+          color: rgba(51, 90, 51, 0.842);
+        }
+      }
+     }
+  }
+  &__description{
+    font-size: 1.8rem;
+
+  }
+ 
+
+}

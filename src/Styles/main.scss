@@ -1,30 +1,25 @@
-
 // Import Utils files
 
-@use "./utils/variables" as *  ; // All variables will be available
+@use "./utils/variables" as *; // All variables will be available
 
-@use "./utils/mixins" as *; // Mixins will be available under mixins  
+@use "./utils/mixins" as *; // Mixins will be available under mixins
 
 // Import Base files
 @use "./base/reset";
 @use "./base/globals";
 @use "./base/typography";
 
-
-
 // Import layout components
 @use "./layout/slidebar";
-@use "./layout/header";
 @use "./layout/footer";
 
-// Import page-specific styles
-@use "./pages/home";
-@use "./pages/projects";
-@use "./pages/contact";
-@use './pages/_app';  
- 
+// Import component-specific styles
+@use "./component/home";
+@use "./component/aboutme";
+@use "./component/projects";
+@use "./component/contact";
+@use "./component/skills";
+@use "./component/app";
 
-
-
-//Media 
-@use "./utils/breakpoints" ; // Media queries  
+//Media
+@use "./utils/breakpoints"; // Media queries
