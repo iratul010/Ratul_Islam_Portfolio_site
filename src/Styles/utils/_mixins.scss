@@ -1,21 +1,14 @@
- @use './variables' as *;
-.btn{
-  padding: 1rem 2rem;
-  line-height: 1rem;
-  border: 2px solid $color-grey-light-1;
-  font-size: 1.6rem;
-  color: $color-grey-dark-1;
-  transition: all .3s ease-in;
-  border-radius: 5%;
-  cursor: pointer;
+
+@mixin clearFix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 }
-.btn:hover{
-  transform: scale(1.2);
- 
-}
-.btn-slider{
-  font-size: 2rem;
-  color:#fff;
-  border: none;
-  background-color: transparent;
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

@@ -1,0 +1,202 @@
+@use "../utils/variables" as *;
+.projects {
+  padding: 10rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__subtitle {
+    font-size: 1.8rem;
+    font-weight: 300;
+  }
+  &__title {
+    font-size: 5rem;
+    font-weight: 400;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    color: rgb(78, 133, 78);
+  }
+  &__content {
+    margin-top: 5rem;
+    width: 100%;
+  }
+  &__card {
+    position: relative;
+    height: 40rem;
+    cursor: pointer;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+
+    &-side {
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      text-align: center;
+
+      width: 100%;
+      height: 100%;
+      transition: all 0.8s;
+      backface-visibility: hidden;
+
+      &--front {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding-bottom: 5rem;
+      }
+      &--back {
+        color: white;
+
+        transform: rotateY(180deg);
+
+        & > ul {
+          list-style: none;
+        }
+      }
+    }
+
+    &:hover &-side--front {
+      transform: rotateY(180deg);
+    }
+    &:hover &-side--back {
+      transform: rotateY(0deg);
+    }
+
+    &-title {
+      font-size: 2.2rem;
+      font-weight: 600;
+    }
+  }
+  &__backside {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    &--sideAnimation {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      border-radius: 5%;
+    }
+    &--sideAnimation::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 100px;
+      height: 620px;
+      background-image: linear-gradient(
+        to right,
+        transparent,
+        #73f73b,
+        #99c2e4,
+        #d8e0eb,
+        transparent
+      );
+
+      animation: backsideRotate 6s linear infinite;
+      z-index: -11;
+    }
+    &--sideAnimation::after {
+      content: "";
+      inset: 3px;
+      position: absolute;
+      background-color: $color-primary;
+    }
+  }
+  &__tools {
+    height: 70%;
+    position: absolute;
+
+    & ul {
+      list-style: none;
+      font-size: 1.8rem;
+    }
+    & li {
+      text-align: start;
+    }
+  }
+  &__modalOpen {
+    position: absolute;
+    bottom: 30%;
+  }
+  &__btn--modalOpen {
+    color: $color-primary;
+  }
+  &__image {
+    width: 100%;
+    height: 50%;
+    border-radius: 2%;
+  }
+  &__description {
+    font-size: 1.4rem;
+    font-weight: 200;
+    padding: 0 1rem;
+    border-radius: 10%;
+  }
+  &__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+  }
+  &__link {
+    background-color: white;
+    border-radius: 10rem;
+    &:link,
+    &:visited {
+      font-size: 1.6rem;
+      padding: 0.3rem 1rem;
+      color: $color-primary;
+      display: inline-block;
+      transition: all 0.3s;
+      text-decoration: none;
+      border-bottom: 1px solid $color-primary;
+    }
+    &:hover {
+      color: $color-grey-light-1;
+      background-color: rgba(89, 95, 89, 0.603);
+      transform: translateY(-0.4rem);
+    }
+    &:active {
+      transform: translateY(0);
+    }
+  }
+  // D E L A Y ANIMATION
+  &__card--delayAnimation {
+  opacity: 0;
+    transform: translateY(-10rem) scale(50%);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  &__card--showAnimation {
+    opacity: 1;
+    transform: translateY(0) scale(100%);
+  }
+}
+
+@keyframes backsideRotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

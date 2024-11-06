@@ -1,0 +1,40 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+/*
+.row {
+ max-width: 114rem;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+  @include clearFix;
+}
+.col-1-of-2 {
+   
+  width: calc((100% - #{$gutter-horizontal}) / 2);
+  float: left;
+  &:not(:last-child) {
+    margin-right: $gutter-horizontal;
+  }
+}
+.col-1-of-3 {
+  width: calc((100% - 2 *#{$gutter-horizontal}) / 3);
+  float: left;
+
+  &:not(:last-child) {
+    margin-right: 4rem;
+    margin-bottom: 4rem;
+  }
+}
+
+
+*/
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  gap: $gutter-vertical;
+  
+}

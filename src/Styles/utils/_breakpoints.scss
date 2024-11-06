@@ -638,5 +638,73 @@
      
     }
   }
+  //PROJECTS
+
+ 
+.projects {
+ 
+
+  &__container {
+ 
+  }
+  &__subtitle {
+ 
+  }
+  &__title {
+ 
+  }
+  &__content {
+   
+  
+ 
+
+  }
+  &__card {
+ 
+
+    &-side {
+ 
+      &--front {
+ 
+      }
+      &--back {
+ 
+      }
+    }
+
+    &:hover &-side--front {
+      
+    }
+    &:hover &-side--back {
+    
+    }
+
+    &-title {
+ 
+    }
+  }
+  &__image {
+ 
+  }
+  &__description {
+ 
+  }
+  &__links {
+ 
+  }
+  &__link {
+    &:link,
+    &:visited {
+ 
+    }
+    &:hover {
+     
+    }
+    &:active {
+     
+    }
+  }
+}
+
   
 }
